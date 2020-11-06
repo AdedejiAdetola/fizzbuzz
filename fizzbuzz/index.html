@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>FIZZBUZZ</h1>
+  <button type="button" onclick="fizzbuzz()">click</button>
+  <p id="grue"></p>
+</body>
+<script>
+  function fizzbuzz() {
+    var lists = [];
+    var count;
+    for (count = 1; count <= 100; count++) {
+      if (count % 3 === 0  && count % 5 === 0) {
+        lists.push("fizzbuzz")
+      } else if (count % 3 === 0) {
+        lists.push("fiZZ")
+      } else if (count % 5 === 0) {
+        lists.push("buZZ")
+      } else {
+        lists.push(count)
+      }
+    }
+    
+    document.getElementById("grue").innerHTML = "["+lists+"]";
+  }
+</script>
+</html>
